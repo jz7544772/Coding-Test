@@ -1,0 +1,18 @@
+<button type="button" (click)="getRestaurantsByOutcode()">click me</button>
+
+<ul>
+    <li *ngFor="let restaurant of restaurants">
+        <div>          
+            <span>name:</span> {{restaurant.name}}
+        </div>
+        
+        <div>
+            <span>rating:</span> {{restaurant.rating}}
+        </div>
+
+        <div>
+            <span>cuisine types:</span> {{restaurant.cuisineTypes}}
+        </div>
+        
+    </li>
+</ul>  
