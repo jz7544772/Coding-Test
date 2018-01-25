@@ -16,7 +16,7 @@ export class JustEatService {
 
   constructor(private http:Http) {}
 
-  buildURL(namespace:string, queryParams:Object = {}):string {
+  private buildURL(namespace:string, queryParams:Object = {}):string {
     let url:string = `${this.host}/${namespace}`;
     
     if(Object.keys(queryParams).length > 0) {

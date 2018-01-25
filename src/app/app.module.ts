@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 /* App Root */
 import { AppComponent } from './app.component';
 
-/* Component Module */
+/* Page Modules */
 import { IndexModule } from './components/index/index.module'
 
 @NgModule({
@@ -13,7 +13,7 @@ import { IndexModule } from './components/index/index.module'
     AppComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,  
     HttpModule,
     IndexModule
   ],

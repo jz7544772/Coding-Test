@@ -1,7 +1,17 @@
-<button type="button" (click)="getRestaurantsByOutcode()">click me</button>
+<form #form="ngForm" (ngSubmit)="getRestaurantsByOutcode()">
+    <div class="input-group">
+        <label for="outcode">outcode</label>: 
+        <input id="outcode" placeholder="enter an outcode" type="text" name="outcode" [(ngModel)]="outcode" required />
+    </div>
+    <button type="submit" [disabled]="!form.valid">click me</button>
+</form>
 
-<ul>
-    <li *ngFor="let restaurant of restaurants">
+<div *ngIf="noRestaurantsFound">
+    <p>No nearby restaurants found</p>
+</div>
+
+<ul class="restaurant-list">
+    <li class="restaurant-item" *ngFor="let restaurant of restaurants">
         <div>          
             <span>name:</span> {{restaurant.name}}
         </div>
@@ -12,7 +22,6 @@
 
         <div>
             <span>cuisine types:</span> {{restaurant.cuisineTypes}}
-        </div>
-        
+        </div>    
     </li>
 </ul>  

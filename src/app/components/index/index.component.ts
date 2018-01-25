@@ -13,17 +13,21 @@ import { Restaurant } from '../../interfaces/restaurant';
 })
 export class IndexComponent implements OnInit {
 
+  private outcode:string = '';
   private restaurants:Restaurant[] = [];
+  private noRestaurantsFound:boolean = false;
 
   constructor(private justEatService:JustEatService) { }
 
   ngOnInit() {
   }
+
+
   
-  getRestaurantsByOutcode(outcode:string) {
+  getRestaurantsByOutcode() {
     let self = this;
 
-    self.justEatService.getRestaurantsByOutcode('se19')
+    self.justEatService.getRestaurantsByOutcode(self.outcode)
     .then((response) => { return response.json();} )
     .then((jsonResponse) => {
       self.restaurants = jsonResponse.Restaurants.map((restaurant) => {
@@ -34,10 +38,10 @@ export class IndexComponent implements OnInit {
           cuisineTypes: restaurant.CuisineTypes.map(cuisinetype => cuisinetype.Name).join(', ')
         }
       })
-      debugger;
+      self.noRestaurantsFound = (self.restaurants.length === 0);
     })
     .catch((err) => {
-      debugger;
+      console.error(err);
     })
   } 
 }
