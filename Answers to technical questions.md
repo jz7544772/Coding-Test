@@ -2,12 +2,12 @@
 ### Question 1
 I spent about 8 hours working on the coding test.   
 In addition to completing the story's acceptance criteria, I added a few things to provide a more intuitive user experience.  
-- to disable the submit button, if the outcode input is empty
+- to disable the submit button, if the outcode input is empty, or waiting for API response
 - to change submit button text while waiting for API response
 - to show messages indicating API response error, or no results found
 
 ### Question 2
-The most useful feature what was added to Javascript (ES6) is the lambda expression.
+One of the most useful features what was added to Javascript (ES6) is the lambda expression.
 The lambda expression is usually used in place of callback functions.
 The benefit is to give developers a conisitent understanding of the 'this' keyword in Javascript.
 
