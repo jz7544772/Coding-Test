@@ -9,7 +9,7 @@ In addition to completing the story's acceptance criteria, I added a few things 
 ### Question 2
 One of the most useful features what was added to Javascript (ES6) is the lambda expression.
 The lambda expression is usually used in place of callback functions.
-The benefit is to give developers a conisitent understanding of the 'this' keyword in Javascript.
+The benefit is to give developers a consistent understanding of the 'this' keyword in Javascript.
 
 Code Example:
 ```javascript
