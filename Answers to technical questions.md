@@ -41,7 +41,7 @@ My experience in this area is limited, but this is definitely a topic I would li
 
 ### Question 4
 It is difficulty for any person to view hundreds of items all at once.
-Of couse pagenation can be done in the frontend. 
+Of course pagination can be done in the frontend. 
 
 I think it would be better to have a default limit for number of restaurants in the API response.
 And to add a meta field to the API response to indicate there will be more items to come.
