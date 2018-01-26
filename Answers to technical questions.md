@@ -36,7 +36,7 @@ class Person {
 ```
 
 ### Question 3
-To analyze the frontend performace, we can use the Timeline feature in Chrome's Developer Chrome.
+To analyze the frontend performace, we can use the Timeline feature in Chrome's Developer Console.
 My experience in this area is limited, but this is definitely a topic I would like to dive deeper soon.
 
 ### Question 4
