@@ -1,0 +1,11 @@
+app-root {
+    display: block;
+    max-width: 480px;
+    margin: 0 auto;
+
+    nav {
+        font-size: 1.8em;
+    }
+}
+
+@import "./components/index/index.component";

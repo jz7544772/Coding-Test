@@ -1,0 +1,51 @@
+app-index {
+    form {
+        .input-group {
+            label {
+                font-size: 1.6em;
+            }
+            input {
+                border-radius: 10px;
+                border: 1px solid #CCC;
+                font-size: 1.6em;
+                padding: 5px;
+            }
+            input[type="text"]:focus {
+                border-color: #0095FF;;
+                outline: none;
+            }
+        }
+        button[type="submit"] {
+            margin: 10px 0px;
+        }
+    }
+
+    .error-message {
+        color: #FF0000;
+        font-size: 1.5em;
+    }
+
+    .restaurant-list {
+        list-style: none;
+        margin: 20px 0px 0px 0px;
+        padding: 0px;
+        width: 100%;
+
+        .restaurant-item {
+            border-bottom: 1px solid #cccccc;
+            color: #555555;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+
+            .field {
+                .field-name {
+                    font-weight: 700;
+                }
+                .field-value {
+
+                }
+            }
+        }
+    }
+}

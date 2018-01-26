@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
-import { query } from '@angular/core/src/animation/dsl';
-import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class JustEatService {
 
-  private readonly host:string = 'https://public.je-apis.com/';
+  private readonly host:string = 'https://public.je-apis.com';
 
   private headers:Headers = new Headers({
     'Accept-Tenant': 'uk', 
@@ -16,15 +14,16 @@ export class JustEatService {
 
   constructor(private http:Http) {}
 
-  private buildURL(namespace:string, queryParams:Object = {}):string {
+  buildURL(namespace:string, queryParams:Object = {}):string {
     let url:string = `${this.host}/${namespace}`;
     
     if(Object.keys(queryParams).length > 0) {
       url += '?';
       
       for(let key in queryParams) {
-        url += `${key}=${queryParams[key]}`;
+        url += `${key}=${queryParams[key]}&`;
       }
+      url = url.replace(/&$/, '');
     }  
 
     return url;
